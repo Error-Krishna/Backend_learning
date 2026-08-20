@@ -1,14 +1,23 @@
 import express from "express";
+import cors from "cors";
 
 const app = express();
+
+// app.use(cors({
+//     origin: "*"
+// }));
+
 const port = process.env.PORT || 4000
+
+
+
 
 // app.get("/", (req, res) => {
 //     res.send("server is ready");
 // })
 
 // get a list of 5 jokes
-app.get("/jokes", (req, res) => {
+app.get("/api/jokes", (req, res) => {
     const jokes = [
         {
             "id": 1,
